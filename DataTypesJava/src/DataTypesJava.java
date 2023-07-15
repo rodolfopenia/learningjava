@@ -5,5 +5,16 @@ public class DataTypesJava {
 
         double nD = 123.4561326;
         float nF = 123.456F;
+
+        var salary = 1000;
+        // pension 3%
+        var pension = salary * 0.03;
+        var totalSalary = salary - pension;
+        System.out.println(salary);
+        System.out.println(pension);
+        System.out.println(totalSalary);
+
+        var employeeName = "Rodolfo";
+        System.out.println("Employee: " + employeeName + " SALARY: " + totalSalary);
     }
 }
