@@ -7,6 +7,13 @@ public class Main {
         Doctor myDoctor = new Doctor("Rodolfo", "Cirujano");
         System.out.println(myDoctor.name);
         System.out.println(myDoctor.speciality);
+
+        Patient patient = new Patient("Alejandra", "alejandra@mail.com");
+        patient.setWeight(54.6);
+        System.out.println(patient.getWeight());
+
+        patient.setPhoneNumber("12345678");
+        System.out.println(patient.getPhoneNumber());
     }
 
 }
