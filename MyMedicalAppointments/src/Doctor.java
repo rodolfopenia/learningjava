@@ -4,7 +4,7 @@ import java.util.Date;
 public class Doctor extends User {
     // Atributos
     private String speciality;
-    
+
     Doctor(String name, String email){
         super(name, email);
         System.out.println("El nombre del doctor asignado es: " + name);
@@ -26,6 +26,11 @@ public class Doctor extends User {
 
     public ArrayList<AvailableAppointment> getAvailableAppointments(){
         return availableAppointments;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "\nSpeciality: " + speciality + "\nAvailable" + availableAppointments.toString();
     }
 
     public static class AvailableAppointment{
@@ -60,6 +65,11 @@ public class Doctor extends User {
 
         public void setTime(String time) {
             this.time = time;
+        }
+
+        @Override
+        public String toString() {
+            return "Available Appointment \nDate: " + date + "\nTime: " + time;
         }
     }
 }

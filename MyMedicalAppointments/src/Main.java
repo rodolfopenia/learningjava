@@ -10,22 +10,25 @@ public class Main {
         myDoctor.addAvailableAppointment(new Date(), "4pm");
         myDoctor.addAvailableAppointment(new Date(), "10am");
         myDoctor.addAvailableAppointment(new Date(), "1pm");
+        System.out.println(myDoctor);
 
-        for (Doctor.AvailableAppointment availableAppointment: myDoctor.getAvailableAppointments()){
+        /*for (Doctor.AvailableAppointment availableAppointment: myDoctor.getAvailableAppointments()){
             System.out.println(availableAppointment.getDate() + " " + availableAppointment.getTime());
-        }
+        }*/
 
         System.out.println(myDoctor.getName());
         System.out.println(myDoctor.getSpeciality());
 
         Patient patient = new Patient("Alejandra", "alejandra@mail.com");
-        patient.setWeight(54.6);
+        System.out.println(patient);
+        /*patient.setWeight(54.6);
         System.out.println(patient.getWeight());
 
         patient.setPhoneNumber("12345678");
         System.out.println(patient.getPhoneNumber());
 
-        System.out.println(Day.MONDAY.getSpanish());
+        System.out.println(Day.MONDAY.getSpanish());*/
+
     }
 
     public enum Day{
