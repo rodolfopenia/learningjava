@@ -1,3 +1,5 @@
+import java.util.Date;
+
 import static ui.UIMenu.*;
 
 public class Main {
@@ -5,8 +7,16 @@ public class Main {
         //showMenu();
 
         Doctor myDoctor = new Doctor("Rodolfo", "Cirujano");
-        System.out.println(myDoctor.name);
-        System.out.println(myDoctor.speciality);
+        myDoctor.addAvailableAppointment(new Date(), "4pm");
+        myDoctor.addAvailableAppointment(new Date(), "10am");
+        myDoctor.addAvailableAppointment(new Date(), "1pm");
+
+        for (Doctor.AvailableAppointment availableAppointment: myDoctor.getAvailableAppointments()){
+            System.out.println(availableAppointment.getDate() + " " + availableAppointment.getTime());
+        }
+
+        System.out.println(myDoctor.getName());
+        System.out.println(myDoctor.getSpeciality());
 
         Patient patient = new Patient("Alejandra", "alejandra@mail.com");
         patient.setWeight(54.6);
@@ -14,6 +24,24 @@ public class Main {
 
         patient.setPhoneNumber("12345678");
         System.out.println(patient.getPhoneNumber());
+
+        System.out.println(Day.MONDAY.getSpanish());
     }
 
+    public enum Day{
+        MONDAY("Lunes"),
+        TUESDAY("Jueves"),
+        FRIDAY("viernes"),
+        SATURDAY("Sábado");
+
+        private String spanish;
+        private Day(String s){
+            spanish = s;
+        }
+        private String getSpanish(){
+            return spanish;
+        }
+    }
 }
+
+
