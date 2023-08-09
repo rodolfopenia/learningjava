@@ -5,7 +5,7 @@ import java.util.Scanner;
 import model.Doctor;
 
 public class UIDoctorMenu {
-    public static ArrayList<Doctor> doctorsAvailableAppointments = new ArrayList<Doctor>();
+    public static ArrayList<Doctor> doctorsAvailableAppointments = new ArrayList<>();
 
     public static void showDoctorMenu() {
         int response = 0;

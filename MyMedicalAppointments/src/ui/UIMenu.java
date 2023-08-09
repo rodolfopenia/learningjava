@@ -25,14 +25,13 @@ public class UIMenu {
 
             switch(response){
                 case 1:
-                    System.out.println("model.Doctor");
+                    System.out.println("Doctor");
                     response = 0;
                     authUser(1);
                     break;
                 case 2:
                     response = 0;
                     authUser(2);
-                    // showPatientMenu();
                     break;
                 case 0:
                     System.out.println("Thank you for you visit");
@@ -81,7 +80,7 @@ public class UIMenu {
                         emailCorrect = true;
                         // Obtener el usuario logeado
                         patientLogged = p;
-                        // showDoctorMenu
+                        UIPatientMenu.showPatientMenu();
                     }
                 }
             }
